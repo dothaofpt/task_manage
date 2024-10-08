@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-e7z5ti8zsrq-r(o+0uxrmnh$g&vql6qs&ilz^3_3^a!3)@jf1^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['task_management.onrender.com']
+
 
 
 # Application definition
@@ -77,14 +78,11 @@ WSGI_APPLICATION = 'task_management.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': 'task_management_db',  # Tên cơ sở dữ liệu bạn muốn sử dụng
+        'NAME': 'task_management_db',  
         'ENFORCE_SCHEMA': False,  # Bỏ qua xác thực lược đồ
         'CLIENT': {
-            'host': 'mongodb+srv://thaodo:2005@thaodo.xjmme.mongodb.net/task_management_db',  # Địa chỉ kết nối đến MongoDB Atlas
-            'username': 'thaodo',  # Tên người dùng MongoDB Atlas
-            'password': '2005',  # Mật khẩu MongoDB Atlas
-            'authSource': 'admin',  # Nguồn xác thực, thường là 'admin'
-            'ssl': True,  # Bật SSL
+            'host': 'mongodb+srv://thaodo:2005@thaodo.xjmme.mongodb.net/',  # Địa chỉ kết nối đến MongoDB Atlas
+            
         }
     }
 }
